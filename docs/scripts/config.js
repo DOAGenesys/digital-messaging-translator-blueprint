@@ -1,6 +1,6 @@
 export default {
     // Token Implicit Grant Client ID
-    clientID: '9ded7334-80c2-43fc-9916-75cf098ebf93',
+    clientID: 'e279be86-0547-49e0-bb06-5e3fcf2c0107',
 
     redirectUri: 'https://digital-messaging-translator-blueprint.vercel.app',
 
