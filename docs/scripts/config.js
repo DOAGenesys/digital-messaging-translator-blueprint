@@ -1,13 +1,13 @@
 export default {
     // Token Implicit Grant Client ID
-    clientID: process.env.GC_CLIENT_ID,
+    clientID: window.GCClientId,
 
     redirectUri: 'https://localhost/',
 
     genesysCloud: {
         // Genesys Cloud region
         // eg. 'mypurecloud.ie', 'euw2.pure.cloud', etc...
-        region: process.env.GC_ENVIRONMENT
+        region: window.GCEnvironment
     },
 
     translateServiceURI: 'https://localhost/translate'
