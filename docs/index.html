@@ -44,5 +44,34 @@
         </div>
       </div>
     </div>
+    <script>
+            function getConfig() {
+                return fetch('/api/getConfig')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Environment vars could not be retrieved');
+                        }
+                        return response.json();
+                    });
+            }
+        
+            function setWindowConfig(config) {
+                Object.keys(config).forEach(key => {
+                    window[key] = config[key];
+                });
+            }
+      
+            async function start() {
+                try {
+                    await getConfig()
+                    const config = await getConfig();
+                    setWindowConfig(config);
+                } catch (error) {
+                    console.error('Error occurred:', error);
+                }
+            }
+
+            start();
+    </script>             
   </body>
 </html>
