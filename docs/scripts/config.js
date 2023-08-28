@@ -11,5 +11,5 @@ export default {
         region: 'mypurecloud.ie'
     },
 
-    translateServiceURI: 'https://localhost/translate'
+    translateServiceURI: 'https://digital-messaging-translator-blueprint.vercel.app/translate'
 } 
