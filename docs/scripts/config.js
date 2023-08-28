@@ -1,6 +1,6 @@
 export default {
     // Token Implicit Grant Client ID
-    clientID: 'your-client-id-here',
+    clientID: process.env.GC_CLIENT_ID,
 
     redirectUri: 'https://localhost/',
 
