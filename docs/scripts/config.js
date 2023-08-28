@@ -7,7 +7,7 @@ export default {
     genesysCloud: {
         // Genesys Cloud region
         // eg. 'mypurecloud.ie', 'euw2.pure.cloud', etc...
-        region: 'mypurecloud.com'
+        region: process.env.GC_ENVIRONMENT
     },
 
     translateServiceURI: 'https://localhost/translate'
