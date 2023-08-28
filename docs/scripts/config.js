@@ -2,7 +2,7 @@ export default {
     // Token Implicit Grant Client ID
     clientID: '9ded7334-80c2-43fc-9916-75cf098ebf93',
 
-    redirectUri: 'https://localhost/',
+    redirectUri: 'https://digital-messaging-translator-blueprint.vercel.app/',
 
     genesysCloud: {
         // Genesys Cloud region
