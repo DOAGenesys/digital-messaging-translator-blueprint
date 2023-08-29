@@ -2,7 +2,7 @@
 
 This repo follows the original blueprint, but removing the need for a local node.js server. That part is done through a serverless function in Vercel, where the rest of the client-side is also hosted. 
 
-You will need to create this environment variables on your Vercel project:
+You will need to create these environment variables on your Vercel project:
 
 ![image](https://github.com/DOAGenesys/digital-messaging-translator-blueprint/assets/119416710/72dc6052-553e-4935-8cc0-56f8b75d3c67)
 
