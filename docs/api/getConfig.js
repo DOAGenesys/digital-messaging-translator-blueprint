@@ -6,10 +6,10 @@ export default function handler(req, res) {
     }
 
     const config = {
-        clientID: process.env.CLIENT_ID || '',
-        redirectUri: process.env.REDIRECT_URI || '',
+        clientID: process.env.GC_CLIENT_ID || '',
+        redirectUri: process.env.GC_REDIRECT_URI || '',
         genesysCloud: {
-            region: process.env.GENESYS_CLOUD_REGION || ''
+            region: process.env.GC_REGION || ''
         }
     };
 
