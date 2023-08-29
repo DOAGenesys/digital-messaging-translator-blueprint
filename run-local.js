@@ -7,14 +7,11 @@ const cors = require('cors');
 
 // Configure the AWS Translate client
 const translateService = new Translate({ 
-    region: process.env.AWS_REGION,
+    region: 'eu-west-1',
     credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+        accessKeyId: 'AKIAY7ALWLBHUS3CDNPL',
+        secretAccessKey: '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'
     }
-    console.log("[run-local.js] AWS accessKeyId: " + accessKeyId);
-    console.log("[run-local.js] AWS secretAccessKey: " + secretAccessKey);
-    console.log("[run-local.js] AWS region: " + region);
 });
 const app = express();
 
