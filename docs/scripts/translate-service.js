@@ -33,7 +33,7 @@ export default {
             target_language: language_code
         }
 
-        fetch(config.translateServiceURI,
+        fetch('/api/translate',
             {
                 method: 'POST',
                 headers: {
