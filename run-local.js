@@ -12,6 +12,9 @@ const translateService = new Translate({
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     }
+    console.log("[run-local.js] AWS accessKeyId: " + accessKeyId);
+    console.log("[run-local.js] AWS secretAccessKey: " + secretAccessKey);
+    console.log("[run-local.js] AWS region: " + region);
 });
 const app = express();
 
