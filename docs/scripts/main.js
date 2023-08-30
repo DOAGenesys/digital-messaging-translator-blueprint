@@ -336,6 +336,21 @@ function searchResponse(query){
 }
 
 /**
+ * Fetches the configuration data from the server.
+ * @returns {Promise} A promise that resolves to the fetched configuration data.
+ */
+async function fetchConfig() {
+    try {
+        const response = await fetch('/api/getConfig');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching config:', error);
+        throw error;
+    }
+}
+
+/**
  * Replaces the dynamic variables in canned responses with appropriate
  * values. This function is used in the view when an agent clicks a response.
  * @param {String} text 
@@ -422,15 +437,21 @@ const urlParams = new URLSearchParams(window.location.search);
 currentConversationId = urlParams.get('conversationid');
 genesysCloudLanguage = urlParams.get('language');
 
-client.setPersistSettings(true, 'chat-translator');
-client.setEnvironment(config.genesysCloud.region);
-client.loginImplicitGrant(
-    config.clientID,
-    config.redirectUri,
-    { state: JSON.stringify({
-        conversationId: currentConversationId,
-        language: genesysCloudLanguage
-    }) })
+// Fetch the config data first
+fetchConfig().then(config => {
+    client.setPersistSettings(true, 'chat-translator');
+    client.setEnvironment(config.genesysCloud.region);
+    return client.loginImplicitGrant(
+        config.clientID,
+        config.redirectUri,
+        {
+            state: JSON.stringify({
+                conversationId: currentConversationId,
+                language: genesysCloudLanguage
+            })
+        }
+    );
+})
 .then(data => {
     console.log(data);
 
