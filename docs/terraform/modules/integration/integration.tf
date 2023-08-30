@@ -11,7 +11,7 @@ resource "genesyscloud_integration" "integration" {
         "groups": [var.groupId],
         "communicationTypeFilter": "chat, webmessaging",
         "queueIdFilterList": [var.queueId],
-        "url": "https://localhost/?conversationid={{gcConversationId}}&language={{gcLangTag}}",
+        "url": "https://localhost/?conversationId={{gcConversationId}}&language={{gcLangTag}}",
         "permissions": null
     })
     advanced = jsonencode({
