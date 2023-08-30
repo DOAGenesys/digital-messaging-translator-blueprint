@@ -1,6 +1,4 @@
-ssl/*
 node_modules/*
-.env
 
 # Local .terraform directories
 **/.terraform/*
