@@ -4,6 +4,7 @@ const languageCodeMapping = {
     'da': 'da',
     'de': 'de',
     'en-us': 'en',
+    'en-uk': 'en',
     'es': 'es',
     'fr': 'fr',
     'it': 'it',
@@ -24,6 +25,8 @@ export default {
     translateText(text, language, callback){
         let language_code = languageCodeMapping[language] ? 
                     languageCodeMapping[language] : language;
+
+        console.log("Determined language code in translate-service.js:", language_code);
 
         let data = {
             raw_text: text,
