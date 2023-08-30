@@ -434,7 +434,7 @@ document.getElementById('toggle-search')
  *                       INITIAL SETUP
  * -------------------------------------------------------------- */
 const urlParams = new URLSearchParams(window.location.search);
-currentConversationId = urlParams.get('conversationid');
+currentConversationId = urlParams.get('conversationId');
 genesysCloudLanguage = urlParams.get('language');
 
 // Fetch the config data first
