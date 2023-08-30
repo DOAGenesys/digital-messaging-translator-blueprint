@@ -1,5 +1,3 @@
-import config from './config.js';
-
 // Genesys Cloud Language Code to AWS Translate Language Code
 const languageCodeMapping = {
     'cs': 'cs',
