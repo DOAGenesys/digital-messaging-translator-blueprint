@@ -10,7 +10,7 @@ On Genesys Cloud, you will need OAuth implicit grant credentials. In them, inclu
 
 Also, create an interaction widget with an application URL like this one:
 
-https://<webAppURL>/?language={{gcLangTag}}&gcTargetEnv={{gcTargetEnv}}&gcHostOrigin={{gcHostOrigin}}&conversationId={{gcConversationId}}
+https://[webAppURL]/?language={{gcLangTag}}&gcTargetEnv={{gcTargetEnv}}&gcHostOrigin={{gcHostOrigin}}&conversationId={{gcConversationId}}
 
 The application will auto detect the language of both the customer and the agent (the agent's one depends on GC language settings)
 
